@@ -1,6 +1,10 @@
 # Sylithe v2
 
-**Satellite-powered dMRV for forest carbon.** Sylithe turns a drawn or uploaded land boundary into a full digital Monitoring, Reporting & Verification (dMRV) package — canopy height, land-cover classification, deforestation/fire history, official forest overlays, and AI-narrated reports — computed on demand from open Earth-observation data, with no field survey required to get a first read.
+**Satellite-powered dMRV for forest carbon.**
+
+Forest carbon projects live and die by measurement. Ground-truthing a site's biomass, canopy structure, and land-cover history traditionally means weeks of field survey and third-party consultancy before a developer, buyer, or regulator can even begin to trust the numbers — a cost and latency that keeps smaller, high-integrity projects out of the market entirely. Sylithe closes that gap: draw or upload a land boundary and get a verifiable, satellite-derived Monitoring, Reporting & Verification (dMRV) package back in seconds, not weeks.
+
+At the core is **Sylithe CHM v2**, our in-house canopy height model, paired with a Google Earth Engine pipeline that fuses ESA WorldCover land-cover classification, Sentinel-2 time-series change detection, and the JRC Global Forest Cover registry into a single computed report — canopy height distribution, deforestation and fire history, official forest overlays, reforestation eligibility, and an AI-narrated written assessment — all generated on demand from open Earth-observation data, with no field survey required to get a first read.
 
 <p align="left">
   <img alt="stack" src="https://img.shields.io/badge/frontend-React%2019%20%2B%20Vite-08292f">
