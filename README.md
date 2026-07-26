@@ -40,7 +40,7 @@
 
 A user (landowner, carbon project developer, corporate buyer, investor, or government body) draws or uploads an Area of Interest (AOI) on an interactive map. Sylithe fans that AOI out to Google Earth Engine and, in a single request, returns:
 
-- **Canopy Height Model (CHM)** — per-pixel tree height from Meta's high-resolution global canopy height dataset, bucketed into a height-distribution histogram and clustered tree points for map rendering.
+- **Sylithe CHM v2** — our canopy height model, delivering per-pixel tree height at high resolution, bucketed into a height-distribution histogram and clustered tree points for map rendering.
 - **Land-cover classification** — ESA WorldCover breakdown (forest, cropland, grassland, bareland, water, mangroves, urban, ice/snow) with per-class hectare totals and map tile overlays.
 - **Change detection** — deforestation (NDVI drop 2018 → present) and burn-scar history (NBR-based, year-by-year 2012–2022) from Sentinel-2 imagery.
 - **Official forest overlay** — JRC Global Forest Cover 2020 (v3), the authoritative layer used for EUDR-aligned reporting.
@@ -73,7 +73,7 @@ flowchart TB
     end
 
     subgraph External["External Services"]
-        GEE[(Google Earth Engine<br/>ESA WorldCover · Sentinel-2<br/>Meta Canopy Height · JRC GFC2020)]
+        GEE[(Google Earth Engine<br/>ESA WorldCover · Sentinel-2<br/>Sylithe CHM v2 · JRC GFC2020)]
         Mongo[(MongoDB<br/>users · projects_cache · tree_inventory · …)]
         DeepSeek[[DeepSeek LLM<br/>AI report narration]]
         Resend[[Resend<br/>transactional email]]
@@ -242,7 +242,7 @@ flowchart TD
     C --> E[Reforestation eligibility %<br/>cropland + grass + bareland]
     B --> F["Sentinel-2 NDVI diff (2018 vs. selected year)<br/>→ deforestation mask"]
     B --> G["Sentinel-2 NBR per year, 2012–2022<br/>→ burn-scar masks"]
-    B --> H["Meta global Canopy Height dataset<br/>mosaic, clip to AOI"]
+    B --> H["Sylithe CHM v2<br/>mosaic, clip to AOI"]
     H --> I[Mean / max height<br/>fixed-bucket histogram, 5 m bins]
     H --> J["Pixel-level lon/lat/height sample (3 m scale)<br/>→ tree point cloud for map clustering"]
     B --> K["JRC GFC2020 v3<br/>official registered-forest overlay"]
