@@ -1,8 +1,6 @@
 # Sylithe v2
 
-**Satellite-powered dMRV for forest carbon.**
-
-Forest carbon projects live and die by measurement. Ground-truthing a site's biomass, canopy structure, and land-cover history traditionally means weeks of field survey and third-party consultancy before a developer, buyer, or regulator can even begin to trust the numbers — a cost and latency that keeps smaller, high-integrity projects out of the market entirely. Sylithe closes that gap: draw or upload a land boundary and get a verifiable, satellite-derived Monitoring, Reporting & Verification (dMRV) package back in seconds, not weeks.
+Sylithe is an AI-powered digital MRV (Monitoring, Reporting & Verification) platform that enables carbon project developers, enterprises, and sustainability organisations to monitor, measure, and report the impact of nature-based carbon projects using satellite intelligence, remote sensing, and proprietary AI/ML models. Our platform automates land-use classification, canopy height modelling, biomass and carbon stock estimation, and continuous project monitoring, reducing MRV costs and timelines while improving transparency and audit readiness. By delivering accurate, data-driven insights aligned with international carbon standards, Sylithe helps scale high-integrity carbon projects and accelerate climate action.
 
 At the core is **Sylithe CHM v2**, our in-house canopy height model, paired with a Google Earth Engine pipeline that fuses ESA WorldCover land-cover classification, Sentinel-2 time-series change detection, and the JRC Global Forest Cover registry into a single computed report — canopy height distribution, deforestation and fire history, official forest overlays, reforestation eligibility, and an AI-narrated written assessment — all generated on demand from open Earth-observation data, with no field survey required to get a first read.
 
